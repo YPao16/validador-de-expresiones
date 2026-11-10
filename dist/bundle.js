@@ -9,28 +9,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/Acciones.js"
-/*!*************************!*\
-  !*** ./src/Acciones.js ***!
-  \*************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _Personaje_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Personaje.js */ \"./src/Personaje.js\");\n\nclass Acciones extends _Personaje_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n  constructor(nombre) {\n    super(nombre);\n  }\n  atkBasico() {\n    this.setEnergia(parseInt(this.getEnergia() - 5));\n    this.setKi(parseInt(this.getKi() - 10));\n    this.mostrarEstadisticas();\n  }\n  atkEspecial() {\n    this.setEnergia(parseInt(this.getEnergia() - 15));\n    this.setKi(parseInt(this.getKi() - 20));\n    this.mostrarEstadisticas();\n  }\n  curacion() {\n    this.setEnergia(100);\n    this.setKi(100);\n    this.setVida(100);\n    this.setSemilla(this.getSemilla() - 1);\n  }\n  cargaEnergia() {\n    this.setEnergia(this.getEnergia() + 15 > 100 ? 100 : this.getEnergia() + 15);\n    this.setKi(this.getKi() + 10 > 100 ? 100 : this.getKi() + 10);\n    this.mostrarEstadisticas();\n  }\n  defensa() {}\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Acciones);\n\n//# sourceURL=webpack://plantilla/./src/Acciones.js?\n}");
-
-/***/ },
-
-/***/ "./src/Personaje.js"
-/*!**************************!*\
-  !*** ./src/Personaje.js ***!
-  \**************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass Personaje {\n  #vida = 100;\n  #nombre;\n  #ki = 100;\n  #energia = 100;\n  #semilla = 2;\n  constructor(nombre) {\n    this.#nombre = nombre;\n    this.mostrarEstadisticas();\n  }\n  mostrarEstadisticas() {\n    console.log(`\n            nombre:${this.#nombre},\n            ************************\n            ki:${this.#ki},            \n            vida:${this.#vida},            \n            energia:${this.#energia},            \n            semilla:${this.#semilla},            \n        `);\n  }\n  getVida() {\n    return this.#vida;\n  }\n  getKi() {\n    return this.#ki;\n  }\n  getEnergia() {\n    return this.#energia;\n  }\n  getSemilla() {\n    return this.#semilla;\n  }\n  getNombre() {\n    return this.#nombre;\n  }\n  setVida(vida) {\n    this.#vida = vida;\n  }\n  setKi(ki) {\n    this.#ki = ki;\n  }\n  setEnergia(energia) {\n    this.#energia = energia;\n  }\n  setSemilla(semilla) {\n    this.#semilla = semilla;\n  }\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Personaje);\n\n//# sourceURL=webpack://plantilla/./src/Personaje.js?\n}");
-
-/***/ },
-
 /***/ "./src/index.js"
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -38,7 +16,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var bootstrap_dist_js_bootstrap_bundle_min_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/js/bootstrap.bundle.min.js */ \"./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js\");\n/* harmony import */ var bootstrap_dist_js_bootstrap_bundle_min_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_js_bootstrap_bundle_min_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _Acciones_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Acciones.js */ \"./src/Acciones.js\");\n\n\n\nlet pj1 = new _Acciones_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"](\"tester1\");\npj1.atkBasico();\npj1.atkEspecial();\npj1.cargaEnergia();\n\n//# sourceURL=webpack://plantilla/./src/index.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var bootstrap_dist_js_bootstrap_bundle_min_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/js/bootstrap.bundle.min.js */ \"./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js\");\n/* harmony import */ var bootstrap_dist_js_bootstrap_bundle_min_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_js_bootstrap_bundle_min_js__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n// Lógica del validador de expresiones regulares\ndocument.addEventListener('DOMContentLoaded', () => {\n  const btnCompare = document.getElementById('btnCompare');\n  const btnClear = document.getElementById('btnClear');\n  const regexInput = document.getElementById('regexInput');\n  const flagsInput = document.getElementById('flagsInput');\n  const textInput = document.getElementById('textInput');\n  const alertBox = document.getElementById('customAlert');\n  const alertMessage = document.getElementById('alertMessage');\n  function mostrarAlerta(mensaje, tipo) {\n    alertMessage.textContent = mensaje;\n    // Usamos clases de Bootstrap (alert-success, alert-warning, alert-danger)\n    alertBox.className = `alert alert-${tipo} mt-3`;\n  }\n  btnCompare.addEventListener('click', () => {\n    const patron = regexInput.value.trim();\n    const banderas = flagsInput.value.trim();\n    const texto = textInput.value;\n    if (!patron) {\n      mostrarAlerta('Ingresa una expresión regular.', 'danger');\n      return;\n    }\n    try {\n      const regex = new RegExp(patron, banderas);\n      const cumple = regex.test(texto);\n      if (cumple) {\n        mostrarAlerta('¡Éxito! El texto cumple con la expresión regular.', 'success');\n      } else {\n        mostrarAlerta('El texto NO cumple con los criterios de la expresión regular.', 'warning');\n      }\n    } catch (error) {\n      mostrarAlerta(`Error en la sintaxis de la Regex: ${error.message}`, 'danger');\n    }\n  });\n  btnClear.addEventListener('click', () => {\n    regexInput.value = '';\n    flagsInput.value = 'g';\n    textInput.value = '';\n    alertBox.className = 'alert d-none';\n  });\n});\n\n//# sourceURL=webpack://plantilla/./src/index.js?\n}");
 
 /***/ },
 
